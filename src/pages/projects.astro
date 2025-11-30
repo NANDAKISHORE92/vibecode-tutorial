@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const projects = [
+  {
+    title: 'Project One',
+    description: '[Placeholder description for Project One. This will be replaced with a real project description later.]',
+    link: '#',
+  },
+  {
+    title: 'Project Two',
+    description: '[Placeholder description for Project Two. This will be replaced with a real project description later.]',
+    link: '#',
+  },
+  {
+    title: 'Project Three',
+    description: '[Placeholder description for Project Three. This will be replaced with a real project description later.]',
+    link: '#',
+  },
+  {
+    title: 'Project Four',
+    description: '[Placeholder description for Project Four. This will be replaced with a real project description later.]',
+    link: '#',
+  },
+];
+---
+
+<Layout title="Projects - Nanda Kishore">
+  <Header />
+  <main class="flex-1">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <h1 class="font-heading text-5xl md:text-6xl font-bold mb-16">
+        Projects
+      </h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {projects.map((project) => (
+          <article class="border border-black p-8 hover:bg-gray-50 transition-colors">
+            <h2 class="font-heading text-3xl font-bold mb-4">
+              {project.title}
+            </h2>
+            <p class="mb-6 leading-relaxed text-gray-700">
+              {project.description}
+            </p>
+            <a
+              href={project.link}
+              class="text-violent-red font-heading font-bold hover:underline inline-block"
+            >
+              View Project →
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+

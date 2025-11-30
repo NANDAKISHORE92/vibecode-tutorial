@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+---
+
+<Layout title="Nanda Kishore - Home">
+  <Header />
+  <main class="flex-1">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-heading text-6xl md:text-7xl font-bold mb-8 leading-tight">
+          Hello, I'm Nanda Kishore
+        </h1>
+        <p class="text-2xl md:text-3xl mb-12 leading-relaxed text-gray-700">
+          [Placeholder: Brief introduction about who you are and what you do. This will be replaced with real content later.]
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="/about"
+            class="px-8 py-4 bg-violent-red text-white font-heading font-bold hover:bg-red-600 transition-colors inline-block"
+          >
+            Learn More
+          </a>
+          <a
+            href="/projects"
+            class="px-8 py-4 border-2 border-black font-heading font-bold hover:bg-black hover:text-white transition-colors inline-block"
+          >
+            View Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <NewsletterSignup />
+  </main>
+  <Footer />
+</Layout>
+
